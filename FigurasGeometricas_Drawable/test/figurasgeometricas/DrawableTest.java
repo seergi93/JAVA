@@ -3,8 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.FooBarSpam.figurasgeometricas;
+package figurasgeometricas;
 
+import figurasgeometricas.Elipse;
+import figurasgeometricas.Cuadrado;
+import figurasgeometricas.Drawable;
+import figurasgeometricas.Circulo;
+import figurasgeometricas.Rectangulo;
+import figurasgeometricas.Triangulo;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
