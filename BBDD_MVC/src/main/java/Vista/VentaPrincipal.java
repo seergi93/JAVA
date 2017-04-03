@@ -30,6 +30,7 @@ public class VentaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jLabel6 = new javax.swing.JLabel();
         jNombreField = new javax.swing.JTextField();
         jApellidoField = new javax.swing.JTextField();
         jDNIField3 = new javax.swing.JTextField();
@@ -45,37 +46,39 @@ public class VentaPrincipal extends javax.swing.JFrame {
         Guardar = new javax.swing.JButton();
         limpiarButton = new javax.swing.JButton();
         salirButton = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jEdadField = new javax.swing.JTextField();
+        jConsultarButton = new javax.swing.JButton();
+        jEliminarButton = new javax.swing.JButton();
+        jModificacionButton = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+
+        jLabel6.setText("jLabel6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jNombreField.setText("jTextField1");
-        getContentPane().add(jNombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
-
-        jApellidoField.setText("jTextField2");
-        getContentPane().add(jApellidoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
-
-        jDNIField3.setText("jTextField3");
-        getContentPane().add(jDNIField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+        getContentPane().add(jNombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 80, -1));
+        getContentPane().add(jApellidoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 80, -1));
+        getContentPane().add(jDNIField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 80, -1));
 
         jLabel1.setText("Nombre:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         jLabel2.setText("Apellido:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabel3.setText("DNI:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
         jSexoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
-        getContentPane().add(jSexoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        getContentPane().add(jSexoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
 
         jLabel4.setText("Sexo:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         buttonGroup1.add(Trabajando);
         Trabajando.setText("Trabajando");
-        getContentPane().add(Trabajando, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
+        getContentPane().add(Trabajando, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         buttonGroup1.add(Estudiando);
         Estudiando.setText("Estudiando");
@@ -84,23 +87,23 @@ public class VentaPrincipal extends javax.swing.JFrame {
                 EstudiandoActionPerformed(evt);
             }
         });
-        getContentPane().add(Estudiando, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
+        getContentPane().add(Estudiando, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
 
         buttonGroup1.add(EnParo);
         EnParo.setText("En Paro");
-        getContentPane().add(EnParo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        getContentPane().add(EnParo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Estado");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        jLabel5.setText("Estado: ");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        Guardar.setText("Guardar");
+        Guardar.setText("Alta");
         Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, -1, -1));
+        getContentPane().add(Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 90, 30));
 
         limpiarButton.setText("Limpiar");
         limpiarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +111,7 @@ public class VentaPrincipal extends javax.swing.JFrame {
                 limpiarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(limpiarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
+        getContentPane().add(limpiarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 90, 30));
 
         salirButton.setText("Salir");
         salirButton.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +119,23 @@ public class VentaPrincipal extends javax.swing.JFrame {
                 salirButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(salirButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
+        getContentPane().add(salirButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 350, 80, 30));
+
+        jLabel7.setText("Edad:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        getContentPane().add(jEdadField, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 156, 79, -1));
+
+        jConsultarButton.setText("Menú de Consultas");
+        getContentPane().add(jConsultarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 236, 149, 60));
+
+        jEliminarButton.setText("Menú para Eliminar");
+        getContentPane().add(jEliminarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 66, 149, 65));
+
+        jModificacionButton.setText("Menú para Modificar");
+        getContentPane().add(jModificacionButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 149, -1, 69));
+
+        jLabel8.setText("Interfaz Gráfica de BBDD Personas");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 13, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -124,19 +143,6 @@ public class VentaPrincipal extends javax.swing.JFrame {
     private void EstudiandoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstudiandoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EstudiandoActionPerformed
-
-    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
-
-        LogicaInicio.obtenerNombre(jNombreField.getText());
-        LogicaInicio.obtenerApellido(jApellidoField.getText());
-        LogicaInicio.obtenerDNI(jDNIField3.getText());
-        LogicaInicio.obtenerGenero(jSexoComboBox.getSelectedItem().toString());
-        LogicaInicio.obtenerEstado(buttonGroup1.getSelection().getActionCommand());
-       // LogicaInicio.tratarCheckbox(buttonGroup1);
-
-        LogicaInicio.guardarTXT();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GuardarActionPerformed
 
     private void salirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirButtonActionPerformed
         System.exit(0);
@@ -150,6 +156,19 @@ public class VentaPrincipal extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_limpiarButtonActionPerformed
+
+    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
+
+        LogicaInicio.obtenerNombre(jNombreField.getText());
+        LogicaInicio.obtenerApellido(jApellidoField.getText());
+        LogicaInicio.obtenerDNI(jDNIField3.getText());
+        LogicaInicio.obtenerGenero(jSexoComboBox.getSelectedItem().toString());
+        LogicaInicio.obtenerEstado(buttonGroup1.getSelection().getActionCommand());
+        // LogicaInicio.tratarCheckbox(buttonGroup1);
+
+        LogicaInicio.guardarTXT();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,12 +213,19 @@ public class VentaPrincipal extends javax.swing.JFrame {
     private javax.swing.JRadioButton Trabajando;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField jApellidoField;
+    private javax.swing.JButton jConsultarButton;
     private javax.swing.JTextField jDNIField3;
+    private javax.swing.JTextField jEdadField;
+    private javax.swing.JButton jEliminarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton jModificacionButton;
     private javax.swing.JTextField jNombreField;
     private javax.swing.JComboBox<String> jSexoComboBox;
     private javax.swing.JButton limpiarButton;
