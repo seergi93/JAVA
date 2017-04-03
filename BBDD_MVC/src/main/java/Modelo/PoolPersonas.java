@@ -19,7 +19,7 @@ public class PoolPersonas {
 
     public void addPersona() {
 
-        poolPersonas.add(LogicaInicio.Persona());
+        poolPersonas.add(LogicaInicio.getPersona());
 
     }
 

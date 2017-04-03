@@ -135,6 +135,11 @@ public class VentaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jConsultarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 236, 149, 60));
 
         jEliminarButton.setText("Menú para Eliminar");
+        jEliminarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEliminarButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(jEliminarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 66, 149, 65));
 
         jModificacionButton.setText("Menú para Modificar");
@@ -172,14 +177,22 @@ public class VentaPrincipal extends javax.swing.JFrame {
         LogicaInicio.obtenerEdad(jEdadField.getText());
         LogicaInicio.obtenerGenero(jSexoComboBox.getSelectedItem().toString());
         LogicaInicio.obtenerEstado(buttonGroup1.getSelection().getActionCommand());
-       
+
+        
         LogicaInicio.guardarTXT();
+
     }//GEN-LAST:event_GuardarActionPerformed
 
     private void jEdadFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEdadFieldActionPerformed
 
 
     }//GEN-LAST:event_jEdadFieldActionPerformed
+
+    private void jEliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEliminarButtonActionPerformed
+        this.dispose();
+        VentanaEliminar vEliminar = new VentanaEliminar();
+        vEliminar.setVisible(true);
+    }//GEN-LAST:event_jEliminarButtonActionPerformed
 
     /**
      * @param args the command line arguments

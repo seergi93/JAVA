@@ -51,11 +51,16 @@ public class LogicaInicio {
 
     }
 
-    public static Persona Persona() {
-
-        
+    public static Persona getPersona() {
         return persona;
     }
+
+    public static void setPersona(Persona persona) {
+        LogicaInicio.persona = persona;
+    }
+
+    
+    
 
     public static void tratarCheckbox(String estado) {
 
