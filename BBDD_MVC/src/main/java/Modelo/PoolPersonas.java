@@ -14,12 +14,12 @@ import java.util.ArrayList;
  */
 public class PoolPersonas {
 
-    ArrayList<Persona> poolPersonas = new ArrayList<Persona>();
-    Persona p = null;
+    private ArrayList<Persona> poolPersonas = new ArrayList<Persona>();
+    private Persona p = null;
 
     public void addPersona(Persona persona) {
 
-        poolPersonas.add(persona);
+        this.poolPersonas.add(persona);
 
     }
 

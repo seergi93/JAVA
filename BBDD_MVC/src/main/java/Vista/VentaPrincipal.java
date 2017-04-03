@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.LogicaInicio;
+import Modelo.Persona;
 
 /**
  *
@@ -171,15 +172,10 @@ public class VentaPrincipal extends javax.swing.JFrame {
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
 
-        LogicaInicio.obtenerNombre(jNombreField.getText());
-        LogicaInicio.obtenerApellido(jApellidoField.getText());
-        LogicaInicio.obtenerDNI(jDNIField3.getText());
-        LogicaInicio.obtenerEdad(jEdadField.getText());
-        LogicaInicio.obtenerGenero(jSexoComboBox.getSelectedItem().toString());
-        LogicaInicio.obtenerEstado(buttonGroup1.getSelection().getActionCommand());
+        LogicaInicio.altaUsuario(jNombreField.getText(), jApellidoField.getText(),
+                Integer.parseInt(jEdadField.getText()), jDNIField3.getText(), jSexoComboBox.getSelectedItem().toString(),
+                buttonGroup1.getSelection().getActionCommand());
 
-        LogicaInicio.guardarPoolPersonas();
-        LogicaInicio.guardarTXT();
 
     }//GEN-LAST:event_GuardarActionPerformed
 

@@ -14,67 +14,16 @@ import Modelo.RegistroTXT;
  * @author Sergi
  */
 public class LogicaInicio {
-    
-    private static Persona persona = new Persona();
+
+    private static Persona persona = null;
     private static PoolPersonas poolPersona = null;
-    
-    public static void obtenerNombre(String nombre) {
-        
-        persona.setNombre(nombre);
-        
-    }
-    
-    public static void obtenerApellido(String apellido) {
-        persona.setApellido(apellido);
-        
-    }
-    
-    public static void obtenerDNI(String dni) {
-        
-        persona.setDni(dni);
-    }
-    
-    public static void obtenerGenero(String genero) {
-        
-        persona.setSexo(genero);
-        
-    }
-    
-    public static void obtenerEstado(String selection) {
-        
-        persona.setEstado(selection);
-        
-    }
-    
-    public static void guardarTXT() {
-        
+
+    public static void altaUsuario(String nombre, String apellido, int edad, String dni, String genero, String estado) {
+
+        persona = new Persona(nombre, apellido, edad, dni, genero, estado);
         RegistroTXT.guardarTXT(persona);
-        
-    }
-    
-    public static Persona getPersona() {
-        return persona;
-    }
-    
-    public static void setPersona(Persona persona) {
-        LogicaInicio.persona = persona;
-    }
-    
-    public static void tratarCheckbox(String estado) {
-        
-        persona.setEstado(estado);
-        
-    }
-    
-    public static void obtenerEdad(String text) {
-        
-        persona.setEdad(Integer.parseInt(text));
-        
-    }
-    
-    public static void guardarPoolPersonas() {
         poolPersona.addPersona(persona);
-        
+
     }
-    
+
 }
