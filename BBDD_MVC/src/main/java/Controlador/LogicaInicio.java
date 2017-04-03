@@ -6,6 +6,7 @@
 package Controlador;
 
 import Modelo.Persona;
+import Modelo.PoolPersonas;
 import Modelo.RegistroTXT;
 
 /**
@@ -48,6 +49,12 @@ public class LogicaInicio {
 
         RegistroTXT.guardarTXT(persona);
 
+    }
+
+    public static Persona Persona() {
+
+        
+        return persona;
     }
 
     public static void tratarCheckbox(String estado) {

@@ -1,0 +1,17 @@
+Nombre: aadsa
+Apellido: asda
+DNI: adasda
+Sexo: Mujer
+Estado: null
+Nombre: asdasd
+Apellido: adas
+DNI: asdsd
+EDAD: 0
+Sexo: Hombre
+Estado: null
+Nombre: asda
+Apellido: asda
+DNI: asd
+EDAD: 12
+Sexo: Hombre
+Estado: null
