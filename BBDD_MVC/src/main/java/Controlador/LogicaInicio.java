@@ -7,8 +7,6 @@ package Controlador;
 
 import Modelo.Persona;
 import Modelo.RegistroTXT;
-import javax.swing.ButtonGroup;
-import javax.swing.JRadioButton;
 
 /**
  *
@@ -52,9 +50,15 @@ public class LogicaInicio {
 
     }
 
-    public static void tratarCheckbox(ButtonGroup estado) {
+    public static void tratarCheckbox(String estado) {
 
-        persona.setEstado(estado.getSelection().getActionCommand());
+        persona.setEstado(estado);
+
+    }
+
+    public static void obtenerEdad(String text) {
+
+        persona.setEdad(Integer.parseInt(text));
 
     }
 

@@ -1,13 +1,9 @@
 package Modelo;
 
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 /*
@@ -30,6 +26,7 @@ public class RegistroTXT {
             out.println("Nombre: " + persona.getNombre());
             out.println("Apellido: " + persona.getApellido());
             out.println("DNI: " + persona.getDni());
+            out.println("EDAD: " + persona.getEdad());
             out.println("Sexo: " + persona.getSexo());
             out.println("Estado: " + persona.getEstado());
         } catch (IOException error) {
@@ -39,25 +36,4 @@ public class RegistroTXT {
 
     }
 
-//    public static void guardatTXT(Persona persona) {
-//
-//        documento.println("Nombre: ");
-//
-//        crearDoc();
-//
-//    }
-//
-//    private static void crearDoc() {
-//        try {
-//            documento = new PrintWriter("EstatSolicitants.txt");
-//        } catch (FileNotFoundException ex) {
-//            Logger.getLogger(RegistroTXT.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        System.out.println("Se ha creado");
-//        documento.close();
-//    }
-//
-//    public void actionPerformed() {
-//       
-//    }
 }

@@ -14,13 +14,15 @@ public class Persona {
     String nombre;
     String apellido;
     String dni;
+    int edad;
     String sexo;
     String estado;
 
-    public Persona(String nombre, String apellido, String dni, String sexo, String estado) {
+    public Persona(String nombre, String apellido, int edad, String dni, String sexo, String estado) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
+        this.edad = edad;
         this.sexo = sexo;
         this.estado = estado;
     }
@@ -28,6 +30,9 @@ public class Persona {
     public Persona() {
     }
 
+    /*
+    Getters and Setters
+     */
     public String getApellido() {
         return apellido;
     }
@@ -66,6 +71,14 @@ public class Persona {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
 }

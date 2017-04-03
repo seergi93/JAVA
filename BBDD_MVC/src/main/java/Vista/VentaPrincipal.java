@@ -123,6 +123,12 @@ public class VentaPrincipal extends javax.swing.JFrame {
 
         jLabel7.setText("Edad:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+
+        jEdadField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEdadFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(jEdadField, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 156, 79, -1));
 
         jConsultarButton.setText("Menú de Consultas");
@@ -153,6 +159,7 @@ public class VentaPrincipal extends javax.swing.JFrame {
         jNombreField.setText("");
         jApellidoField.setText("");
         jDNIField3.setText("");
+        jEdadField.setText("");
 
 // TODO add your handling code here:
     }//GEN-LAST:event_limpiarButtonActionPerformed
@@ -162,13 +169,16 @@ public class VentaPrincipal extends javax.swing.JFrame {
         LogicaInicio.obtenerNombre(jNombreField.getText());
         LogicaInicio.obtenerApellido(jApellidoField.getText());
         LogicaInicio.obtenerDNI(jDNIField3.getText());
+        LogicaInicio.obtenerEdad(jEdadField.getText());
         LogicaInicio.obtenerGenero(jSexoComboBox.getSelectedItem().toString());
         LogicaInicio.obtenerEstado(buttonGroup1.getSelection().getActionCommand());
-        // LogicaInicio.tratarCheckbox(buttonGroup1);
-
         LogicaInicio.guardarTXT();
-        // TODO add your handling code here:
     }//GEN-LAST:event_GuardarActionPerformed
+
+    private void jEdadFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEdadFieldActionPerformed
+
+
+    }//GEN-LAST:event_jEdadFieldActionPerformed
 
     /**
      * @param args the command line arguments
