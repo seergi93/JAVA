@@ -17,9 +17,9 @@ public class PoolPersonas {
     ArrayList<Persona> poolPersonas = new ArrayList<Persona>();
     Persona p = null;
 
-    public void addPersona() {
+    public void addPersona(Persona persona) {
 
-        poolPersonas.add(LogicaInicio.getPersona());
+        poolPersonas.add(persona);
 
     }
 

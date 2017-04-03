@@ -178,7 +178,7 @@ public class VentaPrincipal extends javax.swing.JFrame {
         LogicaInicio.obtenerGenero(jSexoComboBox.getSelectedItem().toString());
         LogicaInicio.obtenerEstado(buttonGroup1.getSelection().getActionCommand());
 
-        
+        LogicaInicio.guardarPoolPersonas();
         LogicaInicio.guardarTXT();
 
     }//GEN-LAST:event_GuardarActionPerformed
