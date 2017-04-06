@@ -23,4 +23,10 @@ public class PoolPersonas {
 
     }
 
+    public ArrayList<Persona> getPoolPersonas() {
+        return poolPersonas;
+    }
+    
+    
+
 }

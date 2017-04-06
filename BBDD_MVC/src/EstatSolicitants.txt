@@ -51,3 +51,9 @@ DNI: kkk
 EDAD: 8
 Sexo: Hombre
 Estado: null
+Nombre: aa
+Apellido: aa
+DNI: aa
+EDAD: 85
+Sexo: Hombre
+Estado: null

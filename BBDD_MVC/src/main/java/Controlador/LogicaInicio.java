@@ -16,14 +16,36 @@ import Modelo.RegistroTXT;
 public class LogicaInicio {
 
     private static Persona persona = null;
-    private static PoolPersonas poolPersona = null;
+    private static PoolPersonas poolPersonas = new PoolPersonas();
 
     public static void altaUsuario(String nombre, String apellido, int edad, String dni, String genero, String estado) {
 
         persona = new Persona(nombre, apellido, edad, dni, genero, estado);
         RegistroTXT.guardarTXT(persona);
-        poolPersona.addPersona(persona);
+        poolPersonas.addPersona(persona);
+       
 
     }
+    
+    
+
+    public static Persona getPersona() {
+        return persona;
+    }
+
+    public static void setPersona(Persona persona) {
+        LogicaInicio.persona = persona;
+    }
+
+    public static PoolPersonas getPoolPersonas() {
+        return poolPersonas;
+    }
+
+    public static void setPoolPersonas(PoolPersonas poolPersonas) {
+        LogicaInicio.poolPersonas = poolPersonas;
+    }
+    
+    
+    
 
 }
