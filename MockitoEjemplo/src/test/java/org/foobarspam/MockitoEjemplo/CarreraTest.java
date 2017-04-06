@@ -159,8 +159,18 @@ public class CarreraTest {
         assertTrue(carrera.getEstadoConductor());
 
     }
+    
+    
+    @Test 
+    public void getCosteEsperado(){
+        
+        
+    }
+    
+    
+    
 
-    // Mas babas para Slimer
+    
 //    @Test
 //    public void mockito_asignarConductor() {
 //
