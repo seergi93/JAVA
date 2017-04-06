@@ -14,6 +14,7 @@ import org.foobarspam.furnaceDIP.types.RoomTemperature;
  */
 public class App 
 {
+    //sadafafaf
     public static void main( String[] args )
     {
     	final double minTemp = 15.0;
