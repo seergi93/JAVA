@@ -161,20 +161,20 @@ public class CarreraTest {
     }
 
     // Mas babas para Slimer
-    @Test
-    public void mockito_asignarConductor() {
-
-        Conductora mockConductor = mock(Conductora.class);
-
-        when(mockConductor.getNombre()).thenReturn("Samantha");
-        assertEquals("Samantha", mockConductor.getNombre());
-
-        PoolConductoras mockPool = mock(PoolConductoras.class);
-
-        when(mockPool.asignarConductor()).thenReturn(mockConductor);
-        assertEquals(mockPool.asignarConductor().getNombre(), "Samantha");
-
-        carrera.setConductor(mockPool.asignarConductor());
-        assertEquals(carrera.getNombreConductor(), "Samantha");
-    }
+//    @Test
+//    public void mockito_asignarConductor() {
+//
+//        Conductora mockConductor = mock(Conductora.class);
+//
+//        when(mockConductor.getNombre()).thenReturn("Samantha");
+//        assertEquals("Samantha", mockConductor.getNombre());
+//
+//        PoolConductoras mockPool = mock(PoolConductoras.class);
+//
+//        when(mockPool.asignarConductor()).thenReturn(mockConductor);
+//        assertEquals(mockPool.asignarConductor().getNombre(), "Samantha");
+//
+//        carrera.setConductor(mockPool.asignarConductor());
+//        assertEquals(carrera.getNombreConductor(), "Samantha");
+//    }
 }

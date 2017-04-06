@@ -102,4 +102,20 @@ public class Carrera {
     public void liberarConductor() {
         getConductor().setOcupado(false);
     }
+
+    public String getNombreConductor() {
+        return conductor.getNombre();
+    }
+
+    public String getModeloConductor() {
+        return conductor.getModelo();
+    }
+
+    public String getMatriculaConductor() {
+        return conductor.getMatricula();
+    }
+
+    boolean getEstadoConductor() {
+        return conductor.isOcupado();
+    }
 }
