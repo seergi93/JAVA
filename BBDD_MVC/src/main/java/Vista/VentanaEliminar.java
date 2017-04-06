@@ -34,7 +34,7 @@ public class VentanaEliminar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jBuscarButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jValorPersona = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,9 +55,9 @@ public class VentanaEliminar extends javax.swing.JFrame {
 
         jBuscarButton.setText("Buscar");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jValorPersona.setColumns(20);
+        jValorPersona.setRows(5);
+        jScrollPane1.setViewportView(jValorPersona);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,7 +127,7 @@ public class VentanaEliminar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jValorPersona;
     // End of variables declaration//GEN-END:variables
 
 }
