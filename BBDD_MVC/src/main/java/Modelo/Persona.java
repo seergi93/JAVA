@@ -16,15 +16,14 @@ public class Persona {
     String dni;
     int edad;
     String sexo;
-    String estado;
 
-    public Persona(String nombre, String apellido, int edad, String dni, String sexo, String estado) {
+    public Persona(String nombre, String apellido, int edad, String dni, String sexo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.edad = edad;
         this.sexo = sexo;
-        this.estado = estado;
+
     }
 
     public Persona() {
@@ -63,14 +62,6 @@ public class Persona {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
     }
 
     public int getEdad() {

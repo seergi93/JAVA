@@ -28,7 +28,7 @@ public class RegistroTXT {
             out.println("DNI: " + persona.getDni());
             out.println("EDAD: " + persona.getEdad());
             out.println("Sexo: " + persona.getSexo());
-            out.println("Estado: " + persona.getEstado());
+
         } catch (IOException error) {
             System.out.println(error);
         }
