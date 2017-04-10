@@ -128,6 +128,11 @@ public class VentaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 13, -1, -1));
 
         jButtonAñadirPersonas.setText("Añadir 10 Personas");
+        jButtonAñadirPersonas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAñadirPersonasActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonAñadirPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 180, 70));
 
         pack();
@@ -174,6 +179,24 @@ public class VentaPrincipal extends javax.swing.JFrame {
         VentanaEliminar vEliminar = new VentanaEliminar();
         vEliminar.setVisible(true);
     }//GEN-LAST:event_jEliminarButtonActionPerformed
+
+    private void jButtonAñadirPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAñadirPersonasActionPerformed
+
+        LogicaInicio.altaUsuario("Sergi", "Roberti", 23, "78220113B", "Hombre");
+        LogicaInicio.altaUsuario("Jonathan", "Garcia", 18, "31405642Q", "Hombre");
+        LogicaInicio.altaUsuario("Adrián", "Rojas", 21, "48166009F", "Hombre");
+        LogicaInicio.altaUsuario("Margalida", "Vallori", 54, "63911483A", "Mujer");
+        LogicaInicio.altaUsuario("Simon Frederik", "Roberti", 63, "35115435R", "Hombre");
+        LogicaInicio.altaUsuario("Francesca", "Marcús", 16, "23147623D", "Mujer");
+        LogicaInicio.altaUsuario("Frederic", "Roberti", 25, "2644454Y", "Hombre");
+        LogicaInicio.altaUsuario("Rosa", "Arrom", 83, "40784001X", "Mujer");
+        LogicaInicio.altaUsuario("Bartomeu", "Vallori", 87, "11801668T", "Hombre");
+        LogicaInicio.altaUsuario("Magdalena", "Vallori", 57, "26168846K", "Mujer");
+
+        JOptionPane.showMessageDialog(this, "Se han añadido 10 personas en la lista.");
+
+
+    }//GEN-LAST:event_jButtonAñadirPersonasActionPerformed
 
     /**
      * @param args the command line arguments
