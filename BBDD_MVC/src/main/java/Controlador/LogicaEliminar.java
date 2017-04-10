@@ -13,27 +13,43 @@ import Modelo.Persona;
  */
 public class LogicaEliminar {
 
-    public boolean comprovarDNI(String dni) {
+    private static Persona personaEncontrada;
 
-        String objetivo = "12345678P";
+    public static boolean comprovarDNI(String dni) {
+
+        String objetivo = dni;
         String patron = "(^\\d{8}[A-Z&&[^IÑOU]])|(^[XYZ]\\d{7}[A-Z&&[^IÑOU]])";
         RegEx objetoRegEx = new RegEx(patron, objetivo);
         if (objetoRegEx.matching()) {
+
             return true;
         } else {
             return false;
         }
 
     }
-    
-    public static Persona buscarPoolPersonas(String dni){
-        
-        Persona p = new Persona();
-        //LogicaInicio.getPoolPersonas().getPoolPersonas().indexOf(DNI)
-        
-        
-        return p;
+
+    public static boolean buscarPersona(String dni) {
+
+        boolean isFind = false;
+        for (Persona p : LogicaInicio.getPoolPersonas()) {
+            if (p.getDni().contentEquals(dni)) {
+                personaEncontrada = p;
+                isFind = true;
+            }
+
+        }
+        return isFind;
     }
+
+    public static Persona getPersonaEncontrada() {
+        return personaEncontrada;
+    }
+
+    public static void setPersonaEncontrada(Persona personaEncontrada) {
+        LogicaEliminar.personaEncontrada = personaEncontrada;
+    }
+    
     
     
 

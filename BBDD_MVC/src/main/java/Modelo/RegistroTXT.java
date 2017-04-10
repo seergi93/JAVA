@@ -32,7 +32,6 @@ public class RegistroTXT {
         } catch (IOException error) {
             System.out.println(error);
         }
-        System.exit(0);
 
     }
 

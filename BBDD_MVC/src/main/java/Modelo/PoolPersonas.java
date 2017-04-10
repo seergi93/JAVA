@@ -13,19 +13,19 @@ import java.util.ArrayList;
  * @author Sergi
  */
 public class PoolPersonas {
-
-    private ArrayList<Persona> poolPersonas = new ArrayList<Persona>();
-    private Persona p = null;
-
-    public void addPersona(Persona persona) {
-
-        this.poolPersonas.add(persona);
-
-    }
-
-    public ArrayList<Persona> getPoolPersonas() {
-        return poolPersonas;
-    }
+//
+//    private ArrayList<Persona> poolPersonas = new ArrayList<Persona>();
+//    private Persona p = null;
+//
+//    public void addPersona(Persona persona) {
+//
+//        this.poolPersonas.add(persona);
+//
+//    }
+//
+//    public ArrayList<Persona> getPoolPersonas() {
+//        return poolPersonas;
+//    }
     
     
 

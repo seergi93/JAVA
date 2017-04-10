@@ -175,6 +175,12 @@ public class VentaPrincipal extends javax.swing.JFrame {
         LogicaInicio.altaUsuario(jNombreField.getText(), jApellidoField.getText(),
                 Integer.parseInt(jEdadField.getText()), jDNIField3.getText(), jSexoComboBox.getSelectedItem().toString(),
                 buttonGroup1.getSelection().getActionCommand());
+        
+        
+        
+        
+        
+      
 
 
     }//GEN-LAST:event_GuardarActionPerformed

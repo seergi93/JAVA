@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Controlador.LogicaEliminar;
+
 /**
  *
  * @author Sergi
@@ -16,6 +18,7 @@ public class VentanaEliminar extends javax.swing.JFrame {
      */
     public VentanaEliminar() {
         initComponents();
+
     }
 
     /**
@@ -54,6 +57,11 @@ public class VentanaEliminar extends javax.swing.JFrame {
         jLabel2.setText("ELIMINAR DNI");
 
         jBuscarButton.setText("Buscar");
+        jBuscarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBuscarButtonActionPerformed(evt);
+            }
+        });
 
         jValorPersona.setColumns(20);
         jValorPersona.setRows(5);
@@ -111,9 +119,24 @@ public class VentanaEliminar extends javax.swing.JFrame {
         this.dispose();
         VentaPrincipal vPrincipal = new VentaPrincipal();
         vPrincipal.setVisible(true);
-        
+
 
     }//GEN-LAST:event_jAtrasButtonActionPerformed
+
+    private void jBuscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarButtonActionPerformed
+        // TODO add your handling code here:
+        if (LogicaEliminar.comprovarDNI(jDNIField.getText())) {
+            if (LogicaEliminar.buscarPersona(jDNIField.getText())) {
+                jValorPersona.setText("Nombre: " + LogicaEliminar.getPersonaEncontrada().getNombre()
+                        + "\nApellido: " + LogicaEliminar.getPersonaEncontrada().getApellido() + "\nEdad: "
+                        + LogicaEliminar.getPersonaEncontrada().getEdad()
+                );
+
+            }
+        }
+
+
+    }//GEN-LAST:event_jBuscarButtonActionPerformed
 
     /**
      * @param args the command line arguments
