@@ -34,12 +34,17 @@ public class VentanaModificar extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jNombreField = new javax.swing.JTextField();
+        jApellidoField = new javax.swing.JTextField();
+        jEdadField = new javax.swing.JTextField();
+        jSexoField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jButtonCNombre = new javax.swing.JButton();
+        jBApellido = new javax.swing.JButton();
+        jBEdad = new javax.swing.JButton();
+        jBSexo = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jBAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -48,10 +53,10 @@ public class VentanaModificar extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 24, -1, -1));
 
         jDNIField.setText("DNI de la persona a modificar");
-        getContentPane().add(jDNIField, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 21, -1, -1));
+        getContentPane().add(jDNIField, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 21, 200, -1));
 
         jButton1.setText("Buscar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 20, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
 
         jLabel2.setText("Nombre: ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
@@ -64,16 +69,31 @@ public class VentanaModificar extends javax.swing.JFrame {
 
         jLabel5.setText("Edad: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 70, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 70, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 70, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 70, -1));
+        getContentPane().add(jNombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 90, -1));
+        getContentPane().add(jApellidoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 90, -1));
+        getContentPane().add(jEdadField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 90, -1));
+        getContentPane().add(jSexoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 90, -1));
 
         jLabel6.setText("Valories actuales:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
-        jLabel7.setText("Nuevos valores:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
+        jButtonCNombre.setText("Cambiar Nombre");
+        getContentPane().add(jButtonCNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, -1, -1));
+
+        jBApellido.setText("Cambiar Apellido");
+        getContentPane().add(jBApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, -1, -1));
+
+        jBEdad.setText("Cambiar Edad");
+        getContentPane().add(jBEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 130, -1));
+
+        jBSexo.setText("Cambiar Sexo");
+        getContentPane().add(jBSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 130, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
+
+        jBAtras.setText("Atrás");
+        getContentPane().add(jBAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 110, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -81,51 +101,25 @@ public class VentanaModificar extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaModificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaModificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaModificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaModificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaModificar().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField jApellidoField;
+    private javax.swing.JButton jBApellido;
+    private javax.swing.JButton jBAtras;
+    private javax.swing.JButton jBEdad;
+    private javax.swing.JButton jBSexo;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonCNombre;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JTextField jDNIField;
+    private javax.swing.JTextField jEdadField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jNombreField;
+    private javax.swing.JTextField jSexoField;
     // End of variables declaration//GEN-END:variables
 }
