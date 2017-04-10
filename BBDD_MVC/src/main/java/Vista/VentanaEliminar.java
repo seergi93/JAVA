@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.LogicaEliminar;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -46,6 +47,11 @@ public class VentanaEliminar extends javax.swing.JFrame {
         jDNIField.setText("Insertar DNI");
 
         jEliminarButton.setText("Eliminar");
+        jEliminarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEliminarButtonActionPerformed(evt);
+            }
+        });
 
         jAtrasButton.setText("Atrás");
         jAtrasButton.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +95,7 @@ public class VentanaEliminar extends javax.swing.JFrame {
                         .addComponent(jAtrasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
                         .addComponent(jEliminarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,12 +108,12 @@ public class VentanaEliminar extends javax.swing.JFrame {
                     .addComponent(jDNIField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBuscarButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jEliminarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jAtrasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,18 +131,26 @@ public class VentanaEliminar extends javax.swing.JFrame {
 
     private void jBuscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarButtonActionPerformed
         // TODO add your handling code here:
-        if (LogicaEliminar.comprovarDNI(jDNIField.getText())) {
-            if (LogicaEliminar.buscarPersona(jDNIField.getText())) {
-                jValorPersona.setText("Nombre: " + LogicaEliminar.getPersonaEncontrada().getNombre()
-                        + "\nApellido: " + LogicaEliminar.getPersonaEncontrada().getApellido() + "\nEdad: "
-                        + LogicaEliminar.getPersonaEncontrada().getEdad()
-                );
 
-            }
+        if (LogicaEliminar.buscarPersona(jDNIField.getText())) {
+            jValorPersona.setText("Nombre: " + LogicaEliminar.getPersonaEncontrada().getNombre()
+                    + "\nApellido: " + LogicaEliminar.getPersonaEncontrada().getApellido() + "\nEdad: "
+                    + LogicaEliminar.getPersonaEncontrada().getEdad() + "\nSexo: "
+                    + LogicaEliminar.getPersonaEncontrada().getSexo()
+            );
+
         }
 
 
     }//GEN-LAST:event_jBuscarButtonActionPerformed
+
+    private void jEliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEliminarButtonActionPerformed
+        // TODO add your handling code here:
+        LogicaEliminar.eliminarPersona();
+        JOptionPane.showMessageDialog(this, "Se ha eliminado correctamente");
+
+
+    }//GEN-LAST:event_jEliminarButtonActionPerformed
 
     /**
      * @param args the command line arguments

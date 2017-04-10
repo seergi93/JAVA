@@ -5,8 +5,10 @@
  */
 package Vista;
 
+import Controlador.LogicaEliminar;
 import Controlador.LogicaInicio;
 import Modelo.Persona;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -147,8 +149,17 @@ public class VentaPrincipal extends javax.swing.JFrame {
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
 
-        LogicaInicio.altaUsuario(jNombreField.getText(), jApellidoField.getText(),
-                Integer.parseInt(jEdadField.getText()), jDNIField3.getText(), jSexoComboBox.getSelectedItem().toString());
+        if (LogicaEliminar.comprovarDNI(jDNIField3.getText())) {
+
+            LogicaInicio.altaUsuario(jNombreField.getText(), jApellidoField.getText(),
+                    Integer.parseInt(jEdadField.getText()), jDNIField3.getText(), jSexoComboBox.getSelectedItem().toString());
+
+            JOptionPane.showMessageDialog(this, "Se ha añadido la persona correctamente.");
+
+        } else {
+            JOptionPane.showMessageDialog(this, "El DNI es incorrecto");
+
+        }
 
 
     }//GEN-LAST:event_GuardarActionPerformed

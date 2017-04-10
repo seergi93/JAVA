@@ -49,6 +49,13 @@ public class LogicaEliminar {
     public static void setPersonaEncontrada(Persona personaEncontrada) {
         LogicaEliminar.personaEncontrada = personaEncontrada;
     }
+
+    public static void eliminarPersona() {
+    
+        LogicaInicio.getPoolPersonas().remove(personaEncontrada);
+        
+        
+    }
     
     
     

@@ -21,6 +21,7 @@ public class LogicaInicio {
 
     public static void altaUsuario(String nombre, String apellido, int edad, String dni, String genero) {
 
+        
         persona = new Persona(nombre, apellido, edad, dni, genero);
         RegistroTXT.guardarTXT(persona);
         poolPersonas.add(persona);
