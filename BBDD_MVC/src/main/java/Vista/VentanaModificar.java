@@ -247,6 +247,7 @@ public class VentanaModificar extends javax.swing.JFrame {
         jApellidoField.setText("");
         jDNIField.setText("");
         jEdadField.setText("");
+        jDNIField.setText("");
     }//GEN-LAST:event_jLimpiarButtonActionPerformed
     
 
