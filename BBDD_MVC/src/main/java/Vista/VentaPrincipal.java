@@ -111,6 +111,11 @@ public class VentaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jEdadField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 79, -1));
 
         jConsultarButton.setText("Menú de Consultas");
+        jConsultarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jConsultarButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(jConsultarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 236, 149, 60));
 
         jEliminarButton.setText("Menú para Eliminar");
@@ -159,6 +164,8 @@ public class VentaPrincipal extends javax.swing.JFrame {
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
 
+        try{
+        
         if (LogicaEliminar.comprovarDNI(jDNIField3.getText())) {
 
             LogicaInicio.altaUsuario(jNombreField.getText(), jApellidoField.getText(),
@@ -170,6 +177,11 @@ public class VentaPrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "El DNI es incorrecto");
 
         }
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "ERROR");
+        }
+        
 
 
     }//GEN-LAST:event_GuardarActionPerformed
@@ -209,6 +221,15 @@ public class VentaPrincipal extends javax.swing.JFrame {
         vModificar.setVisible(true);
 
     }//GEN-LAST:event_jModificacionButtonActionPerformed
+
+    private void jConsultarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConsultarButtonActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VentanaConsultas vConsultas = new VentanaConsultas();
+        vConsultas.setVisible(true);
+
+
+    }//GEN-LAST:event_jConsultarButtonActionPerformed
 
     /**
      * @param args the command line arguments

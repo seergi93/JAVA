@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Controlador.LogicaConsultas;
+
 /**
  *
  * @author Sergi
@@ -27,21 +29,164 @@ public class VentanaConsultas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jPorSexoButton = new javax.swing.JButton();
+        jNumMenoresButton = new javax.swing.JButton();
+        jInfoMenoresButton = new javax.swing.JButton();
+        jNumMenoresSexoButton = new javax.swing.JButton();
+        jJuviladosButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jConsultasTextArea = new javax.swing.JTextArea();
+        jAtrasButton = new javax.swing.JButton();
+        jLimpiarButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("MENÚ DE CONSULTAS");
+
+        jPorSexoButton.setText("Clasificar por sexo:");
+        jPorSexoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPorSexoButtonActionPerformed(evt);
+            }
+        });
+
+        jNumMenoresButton.setText("Cantidad menores de edad:");
+        jNumMenoresButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNumMenoresButtonActionPerformed(evt);
+            }
+        });
+
+        jInfoMenoresButton.setText("Información menores de edad:");
+        jInfoMenoresButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jInfoMenoresButtonActionPerformed(evt);
+            }
+        });
+
+        jNumMenoresSexoButton.setText("Cantidad Menores de edad por sexo:");
+        jNumMenoresSexoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNumMenoresSexoButtonActionPerformed(evt);
+            }
+        });
+
+        jJuviladosButton.setText("Información juvilados:");
+        jJuviladosButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jJuviladosButtonActionPerformed(evt);
+            }
+        });
+
+        jConsultasTextArea.setColumns(20);
+        jConsultasTextArea.setRows(5);
+        jScrollPane1.setViewportView(jConsultasTextArea);
+
+        jAtrasButton.setText("Atras");
+        jAtrasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAtrasButtonActionPerformed(evt);
+            }
+        });
+
+        jLimpiarButton.setText("Limpiar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPorSexoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jInfoMenoresButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jNumMenoresButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jNumMenoresSexoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jJuviladosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jAtrasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLimpiarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPorSexoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jNumMenoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jInfoMenoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jNumMenoresSexoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jJuviladosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jAtrasButton, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                    .addComponent(jLimpiarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jAtrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAtrasButtonActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VentaPrincipal vPrincipal = new VentaPrincipal();
+        vPrincipal.setVisible(true);
+        
+    }//GEN-LAST:event_jAtrasButtonActionPerformed
+
+    private void jPorSexoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPorSexoButtonActionPerformed
+        // TODO add your handling code here:
+        String mensaje = LogicaConsultas.genero();
+        jConsultasTextArea.setText(mensaje);
+        
+    }//GEN-LAST:event_jPorSexoButtonActionPerformed
+
+    private void jNumMenoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNumMenoresButtonActionPerformed
+        // TODO add your handling code here:
+        String mensaje = LogicaConsultas.menores();
+        jConsultasTextArea.setText(mensaje);
+    }//GEN-LAST:event_jNumMenoresButtonActionPerformed
+
+    private void jInfoMenoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInfoMenoresButtonActionPerformed
+        // TODO add your handling code here:
+        String mensaje = LogicaConsultas.infoMenores();
+        jConsultasTextArea.setText(mensaje);
+        
+    }//GEN-LAST:event_jInfoMenoresButtonActionPerformed
+
+    private void jNumMenoresSexoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNumMenoresSexoButtonActionPerformed
+        // TODO add your handling code here:
+        
+       String mensaje = LogicaConsultas.infoMenoresSexo();
+        jConsultasTextArea.setText(mensaje);
+    }//GEN-LAST:event_jNumMenoresSexoButtonActionPerformed
+
+    private void jJuviladosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jJuviladosButtonActionPerformed
+        // TODO add your handling code here:
+        String mensaje = LogicaConsultas.infoJuvilados();
+        jConsultasTextArea.setText(mensaje);
+    }//GEN-LAST:event_jJuviladosButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +224,15 @@ public class VentanaConsultas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jAtrasButton;
+    private javax.swing.JTextArea jConsultasTextArea;
+    private javax.swing.JButton jInfoMenoresButton;
+    private javax.swing.JButton jJuviladosButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jLimpiarButton;
+    private javax.swing.JButton jNumMenoresButton;
+    private javax.swing.JButton jNumMenoresSexoButton;
+    private javax.swing.JButton jPorSexoButton;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
