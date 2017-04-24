@@ -9,6 +9,12 @@ package Modelo;
  *
  * @author Sergi
  */
+/**
+ * Clase Persona con sus atributos, constructores, getters y setters, sin lógica
+ * alguna.
+ *
+ * @author Sergi
+ */
 public class Persona {
 
     String nombre;

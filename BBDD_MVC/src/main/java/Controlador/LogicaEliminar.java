@@ -8,13 +8,17 @@ import Modelo.Persona;
  * and open the template in the editor.
  */
 /**
- *
+ *Lógica para Eliminar y tambien Modificar usuarios.
  * @author Sergi
  */
 public class LogicaEliminar {
 
     private static Persona personaEncontrada;
-
+/**
+ * Comprueva el DNI con expresiones regulares
+ * @param dni
+ * @return 
+ */
     public static boolean comprovarDNI(String dni) {
 
         String objetivo = dni;
@@ -28,7 +32,11 @@ public class LogicaEliminar {
         }
 
     }
-
+/**
+ * Buscar una persona en el pool personas mediante el DNI
+ * @param dni
+ * @return 
+ */
     public static boolean buscarPersona(String dni) {
 
         boolean isFind = false;

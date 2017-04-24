@@ -6,24 +6,30 @@
 package Controlador;
 
 import Modelo.Persona;
-import Modelo.PoolPersonas;
-import Modelo.RegistroTXT;
 import java.util.ArrayList;
 
 /**
- *
+ * Esta Clase domina la lógica de la ventana principal, también se crea un pool 
+ * personas para ir guardando las personas.
  * @author Sergi
  */
+
 public class LogicaInicio {
 
     private static Persona persona = null;
     private static ArrayList<Persona> poolPersonas = new ArrayList<Persona>();
-
+/**
+ * Método para dar de alta al usuario
+ * @param nombre
+ * @param apellido
+ * @param edad
+ * @param dni
+ * @param genero 
+ */
     public static void altaUsuario(String nombre, String apellido, int edad, String dni, String genero) {
 
         
         persona = new Persona(nombre, apellido, edad, dni, genero);
-        RegistroTXT.guardarTXT(persona);
         poolPersonas.add(persona);
 
     }

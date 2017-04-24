@@ -2,7 +2,10 @@ package Controlador;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-
+/**
+ * Clase de Expresiones Regulares
+ * @author Sergi
+ */
 public class RegEx {
 	
 	private String objetivo = null;

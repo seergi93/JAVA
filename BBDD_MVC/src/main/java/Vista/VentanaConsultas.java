@@ -91,6 +91,11 @@ public class VentanaConsultas extends javax.swing.JFrame {
         });
 
         jLimpiarButton.setText("Limpiar");
+        jLimpiarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLimpiarButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,6 +192,11 @@ public class VentanaConsultas extends javax.swing.JFrame {
         String mensaje = LogicaConsultas.infoJuvilados();
         jConsultasTextArea.setText(mensaje);
     }//GEN-LAST:event_jJuviladosButtonActionPerformed
+
+    private void jLimpiarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLimpiarButtonActionPerformed
+        // TODO add your handling code here:
+        jConsultasTextArea.setText("");
+    }//GEN-LAST:event_jLimpiarButtonActionPerformed
 
     /**
      * @param args the command line arguments
