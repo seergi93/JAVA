@@ -122,6 +122,11 @@ public class VentaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jEliminarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 66, 149, 65));
 
         jModificacionButton.setText("Menú para Modificar");
+        jModificacionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jModificacionButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(jModificacionButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 149, -1, 69));
 
         jLabel8.setText("Interfaz Gráfica de BBDD Personas");
@@ -197,6 +202,13 @@ public class VentaPrincipal extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButtonAñadirPersonasActionPerformed
+
+    private void jModificacionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jModificacionButtonActionPerformed
+        this.dispose();
+        VentanaModificar vModificar = new VentanaModificar();
+        vModificar.setVisible(true);
+
+    }//GEN-LAST:event_jModificacionButtonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,9 @@
  */
 package Vista;
 
+import Controlador.LogicaEliminar;
+import javax.swing.*;
+
 /**
  *
  * @author Sergi
@@ -43,8 +46,8 @@ public class VentanaModificar extends javax.swing.JFrame {
         jBApellido = new javax.swing.JButton();
         jBEdad = new javax.swing.JButton();
         jBSexo = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jBAtras = new javax.swing.JButton();
+        jLimpiarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,6 +59,11 @@ public class VentanaModificar extends javax.swing.JFrame {
         getContentPane().add(jDNIField, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 21, 200, -1));
 
         jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
 
         jLabel2.setText("Nombre: ");
@@ -69,38 +77,179 @@ public class VentanaModificar extends javax.swing.JFrame {
 
         jLabel5.setText("Edad: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        jNombreField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNombreFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(jNombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 90, -1));
+
+        jApellidoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jApellidoFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(jApellidoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 90, -1));
+
+        jEdadField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEdadFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(jEdadField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 90, -1));
+
+        jSexoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSexoFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(jSexoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 90, -1));
 
         jLabel6.setText("Valories actuales:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jButtonCNombre.setText("Cambiar Nombre");
+        jButtonCNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCNombreActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonCNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, -1, -1));
 
         jBApellido.setText("Cambiar Apellido");
+        jBApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBApellidoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, -1, -1));
 
         jBEdad.setText("Cambiar Edad");
+        jBEdad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEdadActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 130, -1));
 
         jBSexo.setText("Cambiar Sexo");
+        jBSexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSexoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 130, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
-
         jBAtras.setText("Atrás");
-        getContentPane().add(jBAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 110, -1));
+        jBAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 110, 30));
+
+        jLimpiarButton.setText("Limpiar");
+        jLimpiarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLimpiarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jLimpiarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 120, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        if (LogicaEliminar.buscarPersona(jDNIField.getText())) {
+
+            jNombreField.setText(LogicaEliminar.getPersonaEncontrada().getNombre());
+            jApellidoField.setText(LogicaEliminar.getPersonaEncontrada().getApellido());
+            jEdadField.setText(Integer.toString(LogicaEliminar.getPersonaEncontrada().getEdad()));
+            jSexoField.setText(LogicaEliminar.getPersonaEncontrada().getSexo());
+
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jNombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNombreFieldActionPerformed
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_jNombreFieldActionPerformed
+
+    private void jApellidoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jApellidoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jApellidoFieldActionPerformed
+
+    private void jBAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAtrasActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VentaPrincipal vPrincipal = new VentaPrincipal();
+        vPrincipal.setVisible(true);
+    }//GEN-LAST:event_jBAtrasActionPerformed
+
+    private void jButtonCNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCNombreActionPerformed
+        // TODO add your handling code here:
+        if (jNombreField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo está vacío");
+        } else {
+            LogicaEliminar.getPersonaEncontrada().setNombre(jNombreField.getText());
+            JOptionPane.showMessageDialog(this, "Se ha cambiado en nombre correctamente");
+        }
+
+
+    }//GEN-LAST:event_jButtonCNombreActionPerformed
+
+    private void jBApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBApellidoActionPerformed
+        // TODO add your handling code here:
+        if (jApellidoField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo está vacío");
+        } else {
+            LogicaEliminar.getPersonaEncontrada().setApellido(jApellidoField.getText());
+            JOptionPane.showMessageDialog(this, "Se ha cambiado en nombre correctamente");
+        }
+    }//GEN-LAST:event_jBApellidoActionPerformed
+
+    private void jBEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEdadActionPerformed
+        // TODO add your handling code here:
+        if (jEdadField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo está vacío");
+        } else {
+            LogicaEliminar.getPersonaEncontrada().setEdad(Integer.parseInt(jEdadField.getText()));
+            JOptionPane.showMessageDialog(this, "Se ha cambiado en nombre correctamente");
+        }
+    }//GEN-LAST:event_jBEdadActionPerformed
+
+    private void jEdadFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEdadFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jEdadFieldActionPerformed
+
+    private void jSexoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSexoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSexoFieldActionPerformed
+
+    private void jBSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSexoActionPerformed
+        // TODO add your handling code here:
+        if (jEdadField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo está vacío");
+        } else {
+            LogicaEliminar.getPersonaEncontrada().setSexo(jSexoField.getText());
+            JOptionPane.showMessageDialog(this, "Se ha cambiado en nombre correctamente");
+        }
+    }//GEN-LAST:event_jBSexoActionPerformed
+
+    private void jLimpiarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLimpiarButtonActionPerformed
+        // TODO add your handling code here:
+        
+        jNombreField.setText("");
+        jApellidoField.setText("");
+        jDNIField.setText("");
+        jEdadField.setText("");
+    }//GEN-LAST:event_jLimpiarButtonActionPerformed
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField jApellidoField;
@@ -110,7 +259,6 @@ public class VentanaModificar extends javax.swing.JFrame {
     private javax.swing.JButton jBSexo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCNombre;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JTextField jDNIField;
     private javax.swing.JTextField jEdadField;
     private javax.swing.JLabel jLabel1;
@@ -119,6 +267,7 @@ public class VentanaModificar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton jLimpiarButton;
     private javax.swing.JTextField jNombreField;
     private javax.swing.JTextField jSexoField;
     // End of variables declaration//GEN-END:variables
