@@ -72,6 +72,8 @@ public class Setmana1Tests {
 	 */
 	@Test
 	public void test_creacio_dades_inicials() {
+            servei.matricula(1, "Antonia");
+            servei.matricula(2, "Joan");
 		assertEquals("Antonia", repositori.obteAlumne(1));
 		assertEquals("Joan", repositori.obteAlumne(2));
 	}
