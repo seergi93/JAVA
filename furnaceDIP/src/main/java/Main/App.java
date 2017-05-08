@@ -1,12 +1,12 @@
-package org.foobarspam.furnaceDIP.Main;
+package Main;
 
-import org.foobarspam.furnaceDIP.hardware.GasHeater;
-import org.foobarspam.furnaceDIP.hardware.Regulator;
-import org.foobarspam.furnaceDIP.hardware.RemoteCommandSensor;
-import org.foobarspam.furnaceDIP.interfaces.Heater;
-import org.foobarspam.furnaceDIP.interfaces.Thermometer;
-import org.foobarspam.furnaceDIP.otherstuff.Jedi;
-import org.foobarspam.furnaceDIP.types.RoomTemperature;
+import Hardware.GasHeater;
+import Hardware.Regulator;
+import Hardware.RemoteCommandSensor;
+import interfaces.Heater;
+import interfaces.Thermometer;
+import otherstuff.Jedi;
+import types.RoomTemperature;
 
 /**
  * Hello world!

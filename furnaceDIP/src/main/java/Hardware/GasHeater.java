@@ -1,7 +1,7 @@
-package org.foobarspam.furnaceDIP.hardware;
+package Hardware;
 
-import org.foobarspam.furnaceDIP.interfaces.Heater;
-import org.foobarspam.furnaceDIP.types.RoomTemperature;
+import interfaces.Heater;
+import types.RoomTemperature;
 
 public class GasHeater implements Heater {
 	

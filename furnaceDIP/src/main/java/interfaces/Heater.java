@@ -1,6 +1,6 @@
-package org.foobarspam.furnaceDIP.interfaces;
+package interfaces;
 
-import org.foobarspam.furnaceDIP.types.RoomTemperature;
+import types.RoomTemperature;
 
 public interface Heater {
 	
