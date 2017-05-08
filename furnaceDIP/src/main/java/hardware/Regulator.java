@@ -1,13 +1,18 @@
 package hardware;
 
 import interfaces.Heater;
+import interfaces.Regulate;
 import interfaces.Thermometer;
 import types.RegulatorDisplayCodes;
 import types.RoomTemperature;
 
-public class Regulator {
-	
-	public void regulate(Thermometer t, Heater h, double minTemp, double maxTemp, RoomTemperature temperature){
+public class Regulator implements Regulate {
+    
+    private  double temperature;
+    private double maxTemp;
+   
+    
+	public void regulate(){
 			RegulatorDisplayCodes code;
 			while(t.read(temperature) < maxTemp){
 				code = RegulatorDisplayCodes.HEATING;				
@@ -21,7 +26,7 @@ public class Regulator {
 			}
 	}
 
-	private void message(RegulatorDisplayCodes code, RoomTemperature temperature){
+	private void message(){
 		switch(code){
 			case HEATING:
 				System.out.println("Calentando => temperatura "+ temperature.getTemperature());
@@ -34,5 +39,8 @@ public class Regulator {
 				break;
 		}
 	}
+        
+        
+        
 
 }

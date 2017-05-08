@@ -1,12 +1,12 @@
 package main;
 
-import hardware.GasHeater;
-import hardware.Regulator;
-import hardware.RemoteCommandSensor;
-import interfaces.Heater;
-import interfaces.Thermometer;
-import otherstuff.Jedi;
-import types.RoomTemperature;
+import com.google.inject.*;
+import hardware.*;
+import hardware.*;
+import interfaces.*;
+import otherstuff.*;
+import types.*;
+
 
 /**
  * Hello world!
@@ -16,23 +16,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        
-        
-    	final double minTemp = 15.0;
-        final double maxTemp = 21.0;
-        
-        RoomTemperature temperature = new RoomTemperature(15);
-        Heater heater = new GasHeater();
-        Thermometer thermometer = new RemoteCommandSensor();
-        
-        Regulator regulator = new Regulator();
-        
-        System.out.println( "Arrancando..." );
-        regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
-        
-        Jedi yoda = new Jedi();
-        System.out.println( "\nArrancando a Yoda: " );
-        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperature);
-        yoda.speak();
+      
+        Injector injector = Guice.createInjector(new RegulatorModule());  
+  
+        /*
+         * Now that we've got the injector, we can build objects.
+         * El codigo equivalente es:
+         * Heater heater = new GasHeater();
+         * Thermometer thermometer = new RemoteCommandSensor();
+         * Regulador regulator = new Regulador(Thermometer, GasHeater);
+         */ 
+Regulador regulador = injector.getInstance(Regulador.class);
     }
 }
