@@ -1,6 +1,6 @@
 package otherstuff;
 
-import Hardware.GasHeater;
+import hardware.GasHeater;
 import interfaces.Heater;
 import types.RoomTemperature;
 

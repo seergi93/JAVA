@@ -1,8 +1,8 @@
-package Main;
+package main;
 
-import Hardware.GasHeater;
-import Hardware.Regulator;
-import Hardware.RemoteCommandSensor;
+import hardware.GasHeater;
+import hardware.Regulator;
+import hardware.RemoteCommandSensor;
 import interfaces.Heater;
 import interfaces.Thermometer;
 import otherstuff.Jedi;
@@ -14,9 +14,10 @@ import types.RoomTemperature;
  */
 public class App 
 {
-    //sadafafaf
     public static void main( String[] args )
     {
+        
+        
     	final double minTemp = 15.0;
         final double maxTemp = 21.0;
         

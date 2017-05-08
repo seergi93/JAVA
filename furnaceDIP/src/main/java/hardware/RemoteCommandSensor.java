@@ -1,4 +1,4 @@
-package Hardware;
+package hardware;
 
 import interfaces.Thermometer;
 import types.RoomTemperature;

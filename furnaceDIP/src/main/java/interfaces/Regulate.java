@@ -11,6 +11,4 @@ package interfaces;
  */
 public interface Regulate {
     
-    
-    
 }

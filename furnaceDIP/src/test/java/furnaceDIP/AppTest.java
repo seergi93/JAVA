@@ -1,4 +1,4 @@
-package org.foobarspam.furnaceDIP;
+package furnaceDIP;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
