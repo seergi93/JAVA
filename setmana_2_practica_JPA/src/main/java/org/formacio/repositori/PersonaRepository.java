@@ -1,5 +1,6 @@
 package org.formacio.repositori;
 
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 /*
@@ -9,5 +10,8 @@ import org.springframework.data.repository.CrudRepository;
  * el tipo de la primary key.
  */
 public interface PersonaRepository extends CrudRepository<Persona, String> {
+
+    public Persona findByClau(String clau);
+    public List<Persona> findByGrupoNombre(String nombre);
 
 }
