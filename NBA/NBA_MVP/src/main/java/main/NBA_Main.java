@@ -30,17 +30,22 @@ public class NBA_Main {
         System.out.println("La división " + central.getName() + " se ha creado satisfactoriamente");
 
         System.out.println("\n *** añadir item simple a compuesto y comprobar nombre *** \n");
-        
+
         Team detroit_pistons = new Team("Detroit Pistons");
         central.addTeam(detroit_pistons);
         System.out.println("En la división " + central.getName() + " está el equipo "
                 + central.getTeams().get(0).getName());
 
-        //  recorrer un item compuesto mostrando su nombre y el de sus hijos: 1 hijo, profundidad 1
+        
         System.out.println("\n *** recorrer un item compuesto mostrando su nombre y el de sus hijos: 1 hijo, profundidad 1 *** \n");
 
+        
+        
+        
         // metodo iterable();
         // añadir varios hijos desde array de strings y recorrer un item compuesto mostrando su nombre y el de sus hijos: n hijos, profundidad 1
+        
+        
         System.out.println("\n ***añadir varios hijos desde array de strings y recorrer un item compuesto mostrando su nombre y el de sus hijos: n hijos, profundidad 1 *** \n");
 
         // crear division "Atlantic"

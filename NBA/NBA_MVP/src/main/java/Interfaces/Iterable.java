@@ -5,12 +5,18 @@
  */
 package Interfaces;
 
+import java.util.List;
+
 /**
  *
  * @author Sergi
  */
 public interface Iterable {
-    
-    public void iterable();
-    
+
+    /*
+    iterable(): recorre la colección de elementos hijo de un elemento compuesto,
+    mostrando en consola el nombre del elemento y el de sus hijos.
+     */
+    public Object iterable(List list);
+
 }

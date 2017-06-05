@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Sergi
  */
-public class Division implements Iterable {
+public class Division implements Interfaces.Iterable {
 
     private String name;
     List<Team> teams;
@@ -48,11 +48,22 @@ public class Division implements Iterable {
         this.teams = teams;
     }
 
+    /*
+    iterable(): recorre la colección de elementos hijo de un elemento compuesto,
+    mostrando en consola el nombre del elemento y el de sus hijos.
+     */
     @Override
-    public Iterator iterator() {
+    public String iterable(List list) {
+        
+        
+
+        for (Team team : this.teams) {
+
+            return team.getName();
+
+        }
         return null;
-    
-    
+
     }
 
 }
