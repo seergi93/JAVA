@@ -6,13 +6,14 @@
 package Basket;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  *
  * @author Sergi
  */
-public class Division {
+public class Division implements Iterable {
 
     private String name;
     List<Team> teams;
@@ -45,6 +46,13 @@ public class Division {
 
     public void setTeams(List<Team> teams) {
         this.teams = teams;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return null;
+    
+    
     }
 
 }

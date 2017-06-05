@@ -19,26 +19,23 @@ public class NBA_Main {
         // crear item simple y testear su nombre
         System.out.println("\n *** crear item simple y testear su nombre *** \n");
 
-        Team team1 = new Team("Indiana Pacers");
+        Team indiana_pacers = new Team("Indiana Pacers");
 
-        System.out.println("El equipo " + team1.getName() + " se ha creado satisfactioramente");
+        System.out.println("El equipo " + indiana_pacers.getName() + " se ha creado satisfactioramente");
 
         // crear item compuesto y testear su nombre
         System.out.println("\n *** crear item compuesto y testear su nombre *** \n");
 
-        Team team2 = new Team("Detroit Pistons");
-        Division division = new Division("Central");
-        System.out.println("La división " + division.getName() + " se ha creado satisfactoriamente");
+        Division central = new Division("Central");
+        System.out.println("La división " + central.getName() + " se ha creado satisfactoriamente");
 
         System.out.println("\n *** añadir item simple a compuesto y comprobar nombre *** \n");
+        
+        Team detroit_pistons = new Team("Detroit Pistons");
+        central.addTeam(detroit_pistons);
+        System.out.println("En la división " + central.getName() + " está el equipo "
+                + central.getTeams().get(0).getName());
 
-        division.addTeam(team2);
-        System.out.println("En la división " + division.getName() + " está el equipo "
-                + division.getTeams().get(0).getName());
-
-        
-        
-        
         //  recorrer un item compuesto mostrando su nombre y el de sus hijos: 1 hijo, profundidad 1
         System.out.println("\n *** recorrer un item compuesto mostrando su nombre y el de sus hijos: 1 hijo, profundidad 1 *** \n");
 
