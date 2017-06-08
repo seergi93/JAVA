@@ -1,8 +1,8 @@
 package main;
 
-import Basket.CompuestoItem;
-import Basket.SimpleItem;
-import item.Item;
+import items.CompuestoItem;
+import items.SimpleItem;
+import items.Item;
 import java.util.ArrayList;
 
 public class NBA_Main {
