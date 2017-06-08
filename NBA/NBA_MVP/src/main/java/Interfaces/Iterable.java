@@ -17,6 +17,6 @@ public interface Iterable {
     iterable(): recorre la colección de elementos hijo de un elemento compuesto,
     mostrando en consola el nombre del elemento y el de sus hijos.
      */
-    public Object iterable(List list);
+    public void iterable();
 
 }
